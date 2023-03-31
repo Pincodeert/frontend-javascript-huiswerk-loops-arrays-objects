@@ -16,9 +16,10 @@ const scores = [
 // 66ç
 // ==========================================
 
-
-
-
+for (let i = 0; i < scores.length; i++) {
+    const result = scores[i].score;
+    console.log(result);
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +33,22 @@ const scores = [
 // D
 // ==========================================
 
+for (let i = 0; i < scores.length; i++) {
+    const result = scores[i].score;
 
-
-
+    if(result < 60){
+        console.log("F");
+    } else if (result <70 ){
+        console.log("D");
+    } else if (result < 80){
+        console.log("C");
+    } else if (result < 90){
+        console.log("B");
+    }
+    else if (result < 100){
+        console.log("A");
+    }
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,9 +63,23 @@ const scores = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < 4; i++) {
+    const result = scores[i].score;
 
-
-
+    if(result < 60){
+        scores[i].grade = "F";
+    } else if (result <70 ){
+        scores[i].grade = "D";
+    } else if (result < 80){
+        scores[i].grade = "C";
+    } else if (result < 90){
+        scores[i].grade = "B";
+    }
+    else if (result < 100){
+        scores[i].grade = "A";
+    }
+}
+console.log(scores);
 
 // ==========================================
 // Opdracht 2
@@ -75,17 +103,31 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+// 1) Print de originele objecten:
+console.log(NOVIEmployees);
 
-
-
-
+// 2a) Maak een for loop om ieder Employee-object in de Array op te kunnen vragen.
+// 2b) Maak een nieuwe property aan in het object Employee.
+// 2c) Schrijf de logica om email adres te "genereren.
+// 2d) Sla het emailadres op in het Employee-Object als key-value pair.
+for (let i = 0; i < 4; i++) {
+    const employee = NOVIEmployees[i];
+    employee.email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+}
+// 3) Print de Array met aangepaste Employee objecten.
+console.log(NOVIEmployees);
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
-
-
+for (let i = 0; i < 4; i++) {
+    const employee = NOVIEmployees[i];
+    const firstName = NOVIEmployees[i].firstName;
+    const lastName = NOVIEmployees[i].lastName;
+    employee.email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@novi.nl";
+}
+console.log(NOVIEmployees);
 
 // ==========================================
 // Opdracht 3
@@ -131,5 +173,24 @@ const students = [
 // ]
 // ==========================================
 
-
+for (let i = 0; i < 12; i++) {
+    const zipCode = students[i].zipCode;
+    switch (zipCode){
+        case "3513": students[i].neighborhood = "Pijlsweerd";
+            break;
+        case "3514": students[i].neighborhood = "Vogelenbuurt";
+            break;
+        case "3512": students[i].neighborhood = "Binnenstad";
+            break;
+        case "3531": students[i].neighborhood = "Lombok";
+            break;
+        case "3572": students[i].neighborhood = "Wittevrouwen";
+            break;
+        case "3581": students[i].neighborhood = "Oudwijk";
+            break;
+        case "3583": students[i].neighborhood = "Schildersbuurt";
+            break;
+        default: students[i].neighborhood = null;
+    }
+} console.log(students);
 
