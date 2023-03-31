@@ -16,7 +16,7 @@ const scores = [
 // 66ç
 // ==========================================
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < scores.length; i++) {
     const result = scores[i].score;
     console.log(result);
 }
@@ -33,7 +33,7 @@ for (let i = 0; i < 4; i++) {
 // D
 // ==========================================
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < scores.length; i++) {
     const result = scores[i].score;
 
     if(result < 60){

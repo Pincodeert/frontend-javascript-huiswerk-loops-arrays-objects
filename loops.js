@@ -11,10 +11,8 @@
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
 
-const asterix = "*";
-
-for(let i = 0; i<5; i++){
-    console.log(asterix.repeat(i+1));
+for (let i = 0; i<5; i++) {
+    console.log("*".repeat(i+1));
 }
 
 // ==========================================
@@ -27,7 +25,7 @@ for(let i = 0; i<5; i++){
 // klaar!
 // ==========================================
 
-for(let i = 0; i < 5; i++){
+for (let i = 0; i < 5; i++) {
     if(i<4){
         console.log("loop...");
     } else {
@@ -99,7 +97,7 @@ for (let i = 0; i < 10; i++) {
 // etc.
 // ==========================================
 
-for (let i = 1; i < 101; i++) {
+for (let i = 1; i <= 101; i++) {
     if((i % 3 === 0) && (i % 5 === 0)){
         console.log("FizzBuzz")
     } else if(i % 3 === 0) {
